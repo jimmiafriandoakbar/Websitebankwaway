@@ -1,0 +1,116 @@
+[25-Feb-2025 11:19:04 UTC] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/bankwawaylampung/public_html/routes/admin.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/bankwawaylampung/public_html/routes/admin.php on line 5
+[25-Feb-2025 11:19:04 UTC] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/bankwawaylampung/public_html/routes/admin.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/bankwawaylampung/public_html/routes/admin.php on line 5
+[10-Mar-2025 09:58:37 UTC] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/bankwawaylampung/public_html/routes/admin.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/bankwawaylampung/public_html/routes/admin.php on line 5
+[06-Apr-2025 00:27:12 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Support\Facades\Route' not found in /home/bankwawaylampung/public_html/routes/web.php:24
+Stack trace:
+#0 {main}
+  thrown in /home/bankwawaylampung/public_html/routes/web.php on line 24
+[16-Apr-2025 02:08:42 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Support\Facades\Broadcast' not found in /home/bankwawaylampung/public_html/routes/channels.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/bankwawaylampung/public_html/routes/channels.php on line 16
+[16-Apr-2025 02:08:50 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Support\Facades\Artisan' not found in /home/bankwawaylampung/public_html/routes/console.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/bankwawaylampung/public_html/routes/console.php on line 17
+[16-Apr-2025 02:08:56 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Support\Facades\Route' not found in /home/bankwawaylampung/public_html/routes/api.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/bankwawaylampung/public_html/routes/api.php on line 17
+[16-Apr-2025 13:36:00 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Support\Facades\Route' not found in /home/bankwawaylampung/public_html/routes/web.php:24
+Stack trace:
+#0 {main}
+  thrown in /home/bankwawaylampung/public_html/routes/web.php on line 24
+[20-Apr-2025 21:35:49 UTC] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/bankwawaylampung/public_html/routes/admin.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/bankwawaylampung/public_html/routes/admin.php on line 5
+[23-Apr-2025 00:01:52 UTC] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/bankwawaylampung/public_html/routes/admin.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/bankwawaylampung/public_html/routes/admin.php on line 5
+[23-Apr-2025 15:38:16 UTC] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/bankwawaylampung/public_html/routes/admin.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/bankwawaylampung/public_html/routes/admin.php on line 5
+[23-Apr-2025 19:41:03 UTC] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/bankwawaylampung/public_html/routes/admin.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/bankwawaylampung/public_html/routes/admin.php on line 5
+[24-Apr-2025 13:27:51 UTC] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/bankwawaylampung/public_html/routes/admin.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/bankwawaylampung/public_html/routes/admin.php on line 5
+[25-Apr-2025 04:04:34 UTC] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/bankwawaylampung/public_html/routes/admin.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/bankwawaylampung/public_html/routes/admin.php on line 5
+[26-Apr-2025 06:17:28 UTC] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/bankwawaylampung/public_html/routes/admin.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/bankwawaylampung/public_html/routes/admin.php on line 5
+[29-Apr-2025 22:31:57 UTC] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/bankwawaylampung/public_html/routes/admin.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/bankwawaylampung/public_html/routes/admin.php on line 5
+[02-May-2025 08:35:58 UTC] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/bankwawaylampung/public_html/routes/admin.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/bankwawaylampung/public_html/routes/admin.php on line 5
+[06-May-2025 02:54:53 UTC] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/bankwawaylampung/public_html/routes/admin.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/bankwawaylampung/public_html/routes/admin.php on line 5
+[08-May-2025 06:27:06 UTC] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/bankwawaylampung/public_html/routes/admin.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/bankwawaylampung/public_html/routes/admin.php on line 5
+[11-May-2025 07:06:48 UTC] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/bankwawaylampung/public_html/routes/admin.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/bankwawaylampung/public_html/routes/admin.php on line 5
+[03-Jun-2025 13:47:39 UTC] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/bankwawaylampung/public_html/routes/admin.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/bankwawaylampung/public_html/routes/admin.php on line 5
+[21-Jul-2025 23:46:10 UTC] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/bankwawaylampung/public_html/routes/admin.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/bankwawaylampung/public_html/routes/admin.php on line 5
+[29-Jul-2025 22:07:37 UTC] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/bankwawaylampung/public_html/routes/admin.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/bankwawaylampung/public_html/routes/admin.php on line 5
+[29-Jul-2025 22:07:37 UTC] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/bankwawaylampung/public_html/routes/admin.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/bankwawaylampung/public_html/routes/admin.php on line 5
+[02-Aug-2025 19:21:23 UTC] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/bankwawaylampung/public_html/routes/admin.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/bankwawaylampung/public_html/routes/admin.php on line 5
+[02-Aug-2025 19:21:23 UTC] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/bankwawaylampung/public_html/routes/admin.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/bankwawaylampung/public_html/routes/admin.php on line 5
+[02-Aug-2025 21:18:19 UTC] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/bankwawaylampung/public_html/routes/admin.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/bankwawaylampung/public_html/routes/admin.php on line 5
+[02-Aug-2025 21:18:19 UTC] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/bankwawaylampung/public_html/routes/admin.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/bankwawaylampung/public_html/routes/admin.php on line 5
+[31-Aug-2025 06:14:17 UTC] PHP Fatal error:  Uncaught Error: Class 'Route' not found in /home/bankwawaylampung/public_html/routes/admin.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/bankwawaylampung/public_html/routes/admin.php on line 5

@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "jquery-price-format": "github:flaviosilveira/Jquery-Price-Format"
+  }
+}

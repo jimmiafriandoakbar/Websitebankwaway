@@ -1,0 +1,42 @@
+[27-Jul-2024 12:25:30 UTC] PHP Warning:  file_exists() expects parameter 1 to be a valid path, string given in /home/bankwawaylampung/public_html/index.php on line 17
+[27-Jul-2024 12:25:31 UTC] PHP Warning:  file_exists() expects parameter 1 to be a valid path, string given in /home/bankwawaylampung/public_html/index.php on line 17
+[27-Jul-2024 12:26:25 UTC] PHP Warning:  file_exists() expects parameter 1 to be a valid path, string given in /home/bankwawaylampung/public_html/index.php on line 17
+[27-Jul-2024 12:26:26 UTC] PHP Warning:  file_exists() expects parameter 1 to be a valid path, string given in /home/bankwawaylampung/public_html/index.php on line 17
+[27-Jul-2024 12:29:21 UTC] PHP Warning:  file_exists() expects parameter 1 to be a valid path, string given in /home/bankwawaylampung/public_html/index.php on line 17
+[27-Jul-2024 12:29:21 UTC] PHP Warning:  file_exists() expects parameter 1 to be a valid path, string given in /home/bankwawaylampung/public_html/index.php on line 17
+[27-Jul-2024 12:36:20 UTC] PHP Warning:  file_exists() expects parameter 1 to be a valid path, string given in /home/bankwawaylampung/public_html/index.php on line 17
+[27-Jul-2024 12:36:20 UTC] PHP Warning:  file_exists() expects parameter 1 to be a valid path, string given in /home/bankwawaylampung/public_html/index.php on line 17
+[27-Jul-2024 12:38:29 UTC] PHP Warning:  file_exists() expects parameter 1 to be a valid path, string given in /home/bankwawaylampung/public_html/index.php on line 17
+[27-Jul-2024 12:38:30 UTC] PHP Warning:  file_exists() expects parameter 1 to be a valid path, string given in /home/bankwawaylampung/public_html/index.php on line 17
+[27-Jul-2024 12:38:33 UTC] PHP Warning:  file_exists() expects parameter 1 to be a valid path, string given in /home/bankwawaylampung/public_html/index.php on line 17
+[27-Jul-2024 12:38:33 UTC] PHP Warning:  file_exists() expects parameter 1 to be a valid path, string given in /home/bankwawaylampung/public_html/index.php on line 17
+[27-Jul-2024 12:38:40 UTC] PHP Warning:  file_exists() expects parameter 1 to be a valid path, string given in /home/bankwawaylampung/public_html/index.php on line 17
+[27-Jul-2024 12:38:40 UTC] PHP Warning:  file_exists() expects parameter 1 to be a valid path, string given in /home/bankwawaylampung/public_html/index.php on line 17
+[27-Jul-2024 12:40:38 UTC] PHP Warning:  file_exists() expects parameter 1 to be a valid path, string given in /home/bankwawaylampung/public_html/index.php on line 17
+[27-Jul-2024 12:40:38 UTC] PHP Warning:  file_exists() expects parameter 1 to be a valid path, string given in /home/bankwawaylampung/public_html/index.php on line 17
+[27-Jul-2024 12:41:04 UTC] PHP Warning:  file_exists() expects parameter 1 to be a valid path, string given in /home/bankwawaylampung/public_html/index.php on line 17
+[27-Jul-2024 12:41:05 UTC] PHP Warning:  file_exists() expects parameter 1 to be a valid path, string given in /home/bankwawaylampung/public_html/index.php on line 17
+[27-Jul-2024 12:42:01 UTC] PHP Warning:  file_exists() expects parameter 1 to be a valid path, string given in /home/bankwawaylampung/public_html/index.php on line 17
+[27-Jul-2024 12:42:02 UTC] PHP Warning:  file_exists() expects parameter 1 to be a valid path, string given in /home/bankwawaylampung/public_html/index.php on line 17
+[27-Jul-2024 12:46:21 UTC] PHP Warning:  file_exists() expects parameter 1 to be a valid path, string given in /home/bankwawaylampung/public_html/index.php on line 17
+[27-Jul-2024 12:46:22 UTC] PHP Warning:  file_exists() expects parameter 1 to be a valid path, string given in /home/bankwawaylampung/public_html/index.php on line 17
+[27-Jul-2024 12:48:23 UTC] PHP Warning:  file_exists() expects parameter 1 to be a valid path, string given in /home/bankwawaylampung/public_html/index.php on line 17
+[27-Jul-2024 12:48:23 UTC] PHP Warning:  file_exists() expects parameter 1 to be a valid path, string given in /home/bankwawaylampung/public_html/index.php on line 17
+[27-Jul-2024 12:49:10 UTC] PHP Warning:  file_exists() expects parameter 1 to be a valid path, string given in /home/bankwawaylampung/public_html/index.php on line 17
+[27-Jul-2024 12:49:10 UTC] PHP Warning:  file_exists() expects parameter 1 to be a valid path, string given in /home/bankwawaylampung/public_html/index.php on line 17
+[27-Jul-2024 12:50:42 UTC] PHP Warning:  file_exists() expects parameter 1 to be a valid path, string given in /home/bankwawaylampung/public_html/index.php on line 17
+[27-Jul-2024 12:50:42 UTC] PHP Warning:  file_exists() expects parameter 1 to be a valid path, string given in /home/bankwawaylampung/public_html/index.php on line 17
+[02-Jun-2025 07:27:08 UTC] PHP Warning:  require_once(/home/bankwawaylampung/public_html/public/index.php): failed to open stream: No such file or directory in /home/bankwawaylampung/public_html/index.php on line 21
+[02-Jun-2025 07:27:08 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/bankwawaylampung/public_html/public/index.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home/bankwawaylampung/public_html/index.php on line 21
+[03-Jul-2025 15:40:12 UTC] PHP Fatal error:  Uncaught Error: Class 'Artisan' not found in /home/bankwawaylampung/public_html/test_mpdf.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/bankwawaylampung/public_html/test_mpdf.php on line 6
+[03-Jul-2025 15:42:39 UTC] PHP Fatal error:  Uncaught Error: Class 'Artisan' not found in /home/bankwawaylampung/public_html/test_mpdf.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/bankwawaylampung/public_html/test_mpdf.php on line 6
+[03-Jul-2025 23:20:57 Asia/Jakarta] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 81920 bytes) in /home/bankwawaylampung/public_html/vendor/composer/ClassLoader.php on line 576
+[05-Jul-2025 21:45:44 Asia/Jakarta] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 290816 bytes) in /home/bankwawaylampung/public_html/vendor/composer/ClassLoader.php on line 576
+[05-Jul-2025 21:46:18 Asia/Jakarta] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 290816 bytes) in /home/bankwawaylampung/public_html/vendor/composer/ClassLoader.php on line 576
+[09-Jul-2025 11:39:57 Asia/Jakarta] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 81920 bytes) in /home/bankwawaylampung/public_html/vendor/composer/ClassLoader.php on line 576
