@@ -32,36 +32,36 @@ class KreditPegawaiController extends Controller
     public function stepOnePemohonPost(Request $request)
     {
         $validatedData = $request->validate([
-    'nik'           => 'required|numeric|unique:kredit_pegawai,nik',
-    'nama_lengkap'  => 'required|string|max:255',
-    'nama_panggilan'=> 'nullable|string|max:255',
-    'tempat_lahir'  => 'nullable|string|max:255',
-    'tgl_lahir'     => 'nullable|date',
-    'alamat'        => 'nullable|string|max:255',
-    'no_tlp'        => 'required|string|max:15',
-    'pekerjaan'     => 'nullable|string|max:255',
-], [
-    
-    'nik.numeric'       => 'NIK harus berupa angka.',
-    'nik.unique'        => 'NIK sudah terdaftar.',
+            'nik'           => 'required|numeric|unique:kredit_pegawai,nik',
+            'nama_lengkap'  => 'required|string|max:255',
+            'nama_panggilan' => 'nullable|string|max:255',
+            'tempat_lahir'  => 'nullable|string|max:255',
+            'tgl_lahir'     => 'nullable|date',
+            'alamat'        => 'nullable|string|max:255',
+            'no_tlp'        => 'required|string|max:15',
+            'pekerjaan'     => 'nullable|string|max:255',
+        ], [
 
-    'required'          => ':attribute wajib diisi.',
-    
-    'nama_lengkap.max'      => 'Nama lengkap maksimal 255 karakter.',
+            'nik.numeric'       => 'NIK harus berupa angka.',
+            'nik.unique'        => 'NIK sudah terdaftar.',
 
-    'nama_panggilan.max'    => 'Nama panggilan maksimal 255 karakter.',
+            'required'          => ':attribute wajib diisi.',
 
-    'tempat_lahir.max'      => 'Tempat lahir maksimal 255 karakter.',
+            'nama_lengkap.max'      => 'Nama lengkap maksimal 255 karakter.',
 
-    'tgl_lahir.date'        => 'Tanggal lahir harus berupa format tanggal yang valid.',
+            'nama_panggilan.max'    => 'Nama panggilan maksimal 255 karakter.',
 
-    'alamat.max'            => 'Alamat maksimal 255 karakter.',
+            'tempat_lahir.max'      => 'Tempat lahir maksimal 255 karakter.',
 
-    
-    'no_tlp.max'            => 'Nomor telepon maksimal 15 karakter.',
+            'tgl_lahir.date'        => 'Tanggal lahir harus berupa format tanggal yang valid.',
 
-    'pekerjaan.max'         => 'Pekerjaan maksimal 255 karakter.',
-]);
+            'alamat.max'            => 'Alamat maksimal 255 karakter.',
+
+
+            'no_tlp.max'            => 'Nomor telepon maksimal 15 karakter.',
+
+            'pekerjaan.max'         => 'Pekerjaan maksimal 255 karakter.',
+        ]);
 
         // Pastikan session selalu array, bukan object
         $old = $request->session()->get('kreditPegawai', []);
@@ -80,31 +80,31 @@ class KreditPegawaiController extends Controller
 
     public function stepTwoPengajuanKreditPost(Request $request)
     {
-       $validatedData = request()->validate([
-    'jenis_kredit'            => 'required|string|max:255',
-    'tujuan'                  => 'required|string|max:255',
-    'nominal'                 => 'required|numeric',
-    'jangka_waktu'            => 'required|integer',
-    'tujuan_pengajuan_kredit' => 'required|string|max:255',
-    'pinjaman_kur' => 'required|string|max:10',
-], [
-    
-    'jenis_kredit.string'   => 'Jenis kredit harus berupa teks.',
-    'jenis_kredit.max'      => 'Jenis kredit maksimal 255 karakter.',
+        $validatedData = request()->validate([
+            'jenis_kredit'            => 'required|string|max:255',
+            'tujuan'                  => 'required|string|max:255',
+            'nominal'                 => 'required|numeric',
+            'jangka_waktu'            => 'required|integer',
+            'tujuan_pengajuan_kredit' => 'required|string|max:255',
+            'pinjaman_kur' => 'required|string|max:10',
+        ], [
 
-    'required'          => ':attribute wajib diisi.',
+            'jenis_kredit.string'   => 'Jenis kredit harus berupa teks.',
+            'jenis_kredit.max'      => 'Jenis kredit maksimal 255 karakter.',
 
-    'tujuan.string'   => 'Tujuan harus berupa teks.',
-    'tujuan.max'      => 'Tujuan maksimal 255 karakter.',
+            'required'          => ':attribute wajib diisi.',
 
-    'nominal.numeric'  => 'Nominal pinjaman harus berupa angka.',
+            'tujuan.string'   => 'Tujuan harus berupa teks.',
+            'tujuan.max'      => 'Tujuan maksimal 255 karakter.',
 
-    'jangka_waktu.integer'  => 'Jangka waktu harus berupa angka bulat (bulan).',
+            'nominal.numeric'  => 'Nominal pinjaman harus berupa angka.',
 
-    'tujuan_pengajuan_kredit.string'   => 'Tujuan pengajuan kredit harus berupa teks.',
-    'tujuan_pengajuan_kredit.max'      => 'Tujuan pengajuan kredit maksimal 255 karakter.',
-    'pinjaman_kur.max'      => 'Tujuan pengajuan kredit maksimal 255 karakter.',
-]);
+            'jangka_waktu.integer'  => 'Jangka waktu harus berupa angka bulat (bulan).',
+
+            'tujuan_pengajuan_kredit.string'   => 'Tujuan pengajuan kredit harus berupa teks.',
+            'tujuan_pengajuan_kredit.max'      => 'Tujuan pengajuan kredit maksimal 255 karakter.',
+            'pinjaman_kur.max'      => 'Tujuan pengajuan kredit maksimal 255 karakter.',
+        ]);
 
         $old = $request->session()->get('kreditPegawai', []);
         if (is_object($old)) {
@@ -124,7 +124,7 @@ class KreditPegawaiController extends Controller
 
     public function agunanPost(Request $request)
     {
-        
+
         // Validasi hanya field agunan yang diperlukan, jangan $request->all()
         $validatedData = $request->validate([
             'jenis_agunan' => 'required',
@@ -156,7 +156,7 @@ class KreditPegawaiController extends Controller
         $validatedData['jenis_agunan'] = implode(', ', (array) $request->input('jenis_agunan'));
 
         $request->session()->put('kreditPegawai', array_merge($old, $validatedData));
-        
+
         return redirect()->route('uploadKtp');
     }
 
@@ -169,26 +169,38 @@ class KreditPegawaiController extends Controller
 
     public function uploadKtpPost(Request $request)
     {
-         // Validasi input KTP
-    $request->validate([
-        'ktp' => 'required|file|mimes:jpg,jpeg,png,pdf|max:2048', 
-    ], [
-        'ktp.required' => 'File KTP wajib diupload.',
-        'ktp.mimes'    => 'Format file harus jpg, jpeg, png, atau pdf.',
-        'ktp.max'      => 'Ukuran file maksimal 2MB.',
-    ]);
+        // Validasi input KTP
+        $request->validate([
+            'ktp' => 'required|file|mimes:jpg,jpeg,png,pdf|max:2048',
+
+            'kartu_keluarga' => 'required|file|mimes:jpg,jpeg,png,pdf|max:2048',
+            'surat_nikah' => 'required|file|mimes:jpg,jpeg,png,pdf|max:2048',
+            'izin_usaha' => 'required|file|mimes:jpg,jpeg,png,pdf|max:2048',
+        ], [
+            'ktp.required' => 'File KTP wajib diupload.',
+            'ktp.mimes'    => 'Format file harus jpg, jpeg, png, atau pdf.',
+            'ktp.max'      => 'Ukuran file maksimal 2MB.',
+        ]);
         $data = $request->session()->get('kreditPegawai', []);
-        // Pastikan $data adalah array, bukan object
+
         if (is_object($data)) {
             $data = (array) $data;
         }
-        // Jika ada upload file KTP, simpan path-nya
-        if ($request->hasFile('ktp')) {
-            $path = $request->file('ktp')->store('ktp');
-            $data['ktp'] = $path;
+
+        // Upload semua file
+        $files = ['ktp', 'kartu_keluarga', 'surat_nikah', 'izin_usaha'];
+        foreach ($files as $file) {
+            if ($request->hasFile($file)) {
+                $path = $request->file($file)->store('uploads/' . $file);
+                $data[$file] = $path;
+            }
         }
+
         $kreditPegawai = new KreditPegawai();
         $kreditPegawai->fill($data);
+
+        \Log::info('DATA DARI SESSION', $data);
+
         $kreditPegawai->save();
 
         $request->session()->forget('kreditPegawai');
