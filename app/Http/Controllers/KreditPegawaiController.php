@@ -40,6 +40,7 @@ class KreditPegawaiController extends Controller
             'alamat'        => 'nullable|string|max:255',
             'no_tlp'        => 'required|string|max:15',
             'pekerjaan'     => 'nullable|string|max:255',
+            'account_officer'  => 'nullable|string|max:255',
         ], [
 
             'nik.numeric'       => 'NIK harus berupa angka.',
