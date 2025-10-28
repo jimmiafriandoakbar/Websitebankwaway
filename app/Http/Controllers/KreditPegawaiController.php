@@ -174,9 +174,9 @@ class KreditPegawaiController extends Controller
         $request->validate([
             'ktp' => 'required|file|mimes:jpg,jpeg,png,pdf|max:2048',
 
-            'kartu_keluarga' => 'required|file|mimes:jpg,jpeg,png,pdf|max:2048',
-            'surat_nikah' => 'required|file|mimes:jpg,jpeg,png,pdf|max:2048',
-            'izin_usaha' => 'required|file|mimes:jpg,jpeg,png,pdf|max:2048',
+            'kartu_keluarga' => 'file|mimes:jpg,jpeg,png,pdf|max:2048',
+            'surat_nikah' => 'file|mimes:jpg,jpeg,png,pdf|max:2048',
+            'izin_usaha' => 'file|mimes:jpg,jpeg,png,pdf|max:2048',
         ], [
             'ktp.required' => 'File KTP wajib diupload.',
             'ktp.mimes'    => 'Format file harus jpg, jpeg, png, atau pdf.',
