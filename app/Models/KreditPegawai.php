@@ -6,9 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class KreditPegawai extends Model
 {
-    //tabel
     protected $table = 'kredit_pegawai';
+
     protected $fillable = [
+        // Step 1
         'nik',
         'nama_lengkap',
         'nama_panggilan',
@@ -18,27 +19,37 @@ class KreditPegawai extends Model
         'no_tlp',
         'pekerjaan',
 
+
+        // Step 2
         'jenis_kredit',
         'tujuan',
         'nominal',
         'jangka_waktu',
         'tujuan_pengajuan_kredit',
 
-        // Agunan
+
+        // Step 3
         'jenis_agunan',
-        // BPKB Kendaraan
         'jenis_kendaraan',
         'merek',
         'tahun_kendaraan',
         'no_polisi',
         'nama_pemilik',
-        // Sertifikat Tanah/Bangunan
         'jenis_sertifikat',
         'luas_tanah',
         'atas_nama',
-        // Lainnya
-        'keterangan_agunan',
-        // Upload KTP
+        'ket_karpeg',
+        'ket_taspen',
+        'ket_sk80',
+        'ket_sk100',
+        'ket_sk',
+        'ket_lainnya',
+
+        'pinjaman_kur',
+        'account_officer',
         'ktp',
+        'kartu_keluarga',
+        'surat_nikah',
+        'izin_usaha',
     ];
 }
