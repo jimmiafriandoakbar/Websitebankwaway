@@ -1,9 +1,9 @@
-/vendor
+# /vendor kasih pager biar ke upload
 /node_modules
 /public/hot
 /public/storage
 /storage/*.key
-.env
+# .env kasih pager biar ke upload
 .env.backup
 .phpunit.result.cache
 Homestead.json
