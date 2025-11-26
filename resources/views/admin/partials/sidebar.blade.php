@@ -80,6 +80,14 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a href="{{ route('admin.logdownload') }}" class="nav-link d-block">
+                        <i class="nav-icon fad fa-clipboard-list"></i>
+                        <p>
+                            Log Download Laporan
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="{{ route('admin.informasi') }}" class="nav-link d-block">
                         <i class="nav-icon fas fa-newspaper fa-2x"></i>
                         <p>

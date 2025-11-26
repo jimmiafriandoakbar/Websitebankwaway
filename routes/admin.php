@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Admin\VerifikasiDownloadController;
+
+Route::get('/logdownload', [VerifikasiDownloadController::class, 'logDownloadLaporan'])->name('logdownload');
+
 
 Route::get('/home', 'HomeController@index')->name('dashboard');
 

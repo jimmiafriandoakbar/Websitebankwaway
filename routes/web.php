@@ -2,6 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use RealRashid\SweetAlert\Facades\Alert;
+use App\Http\Controllers\VerifikasiDownloadController;
+
+Route::post('/verifikasi-download', [VerifikasiDownloadController::class, 'store'])
+     ->name('verifikasi.download');
+
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +24,6 @@ use RealRashid\SweetAlert\Facades\Alert;
 | Application Routes
 |--------------------------------------------------------------------------
 */
-
 
 Route::get('/run', function () {
     Alert::success('Success Title', 'Success Message');
