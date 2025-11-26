@@ -17,6 +17,8 @@
     </div>
 </section>
 
+<!-- Log -->
+
 <section class="content">
     <div class="row">
         <div class="col">
