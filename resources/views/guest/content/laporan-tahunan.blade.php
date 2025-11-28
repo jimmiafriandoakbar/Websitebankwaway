@@ -31,7 +31,7 @@
                 <h5 class="card-title">Laporan Tahunan</h5>
                 <p class="card-text">Tahun 2024</p>
                 <button class="btn btn-link p-0"
-    onclick="openDownloadModal('{{ asset('assetGuest/Pdf_laporan/Laporanpublikasi-2024.pdf') }}')">
+    onclick="openDownloadModal('{{ asset('assetGuest/Pdf_laporan/Laporantahun2024.pdf') }}')">
     Download
 </button>
 
