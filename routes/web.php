@@ -48,11 +48,11 @@ Route::post('/pembukaanRekening', 'GuestController@pembukaanRekeningPost')->name
 Route::get('/kredit', function () {
     return view('guest/content/kredit');
 });
-Route::get('/kredit-umkm', function () {
-    return view('guest/content/kredit-umkm');
+Route::get('/kredit-konsumer', function () {
+    return view('guest/content/kredit-konsumer');
 });
-Route::get('/kredit-pegawai', function () {
-    return view('guest/content/kredit-pegawai');
+Route::get('/kredit-komersil', function () {
+    return view('guest/content/kredit-komersil');
 });
 
 // route warning

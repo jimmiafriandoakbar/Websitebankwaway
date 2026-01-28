@@ -4,100 +4,68 @@
 
 @section('content')
 
-    <!-- content -->
-    <div style="margin: 10px 10px; width:90%; height: auto;" class="row row-cols-1 mx-auto row-cols-md-3 text-white p-5">
-        <a href="{{ url('warning') }}" class="text-white">
-            <div class="col content-produk my-3 ">
-                <img style="filter: brightness(50%);border-radius: 10px" src="{{ asset('assetGuest/img/Home-1.jpg') }}"
-                    class="card-img shadow bg-body " alt="...">
-                <div class="card-img-overlay">
-                    <h3 style="color: white;" class="card-title text-center">Pinjaman UMKM</h3>
-                    <p class="card-text px-4">Kami menyediakan pinjaman bagi UMKM</p>
+<!-- COVER -->
+<div class="border border-2 container my-5">
+    <h2 class="text-center fw-bold mb-4">PRODUK KREDIT</h2>
+    <p class="text-center mb-5">
+        PT BPR Waway Lampung (Perseroda) menyediakan dua jenis produk kredit
+        yang dirancang untuk memenuhi kebutuhan pembiayaan usaha dan kebutuhan konsumtif masyarakat.
+    </p>
+
+    <div class="row row-cols-1 pb-3 row-cols-md-2 g-4 justify-content-center">
+
+
+        <!-- KREDIT KOMERSIL -->
+        <div class="col">
+            <a href="{{ url('kredit-komersil') }}" class="text-decoration-none text-white">
+                <div class="card shadow border-0 rounded-4 overflow-hidden">
+                    <img src="{{ asset('assetGuest/img/Home-1.jpg') }}"
+                         class="card-img"
+                         style="filter: brightness(55%); height: 280px; object-fit: cover;"
+                         alt="Kredit Komersil">
+
+                    <div class="card-img-overlay d-flex flex-column justify-content-center text-center px-4">
+                        <h3 class="fw-bold text-white ">Kredit Komersil</h3>
+                        <p class="mt-3">
+                            Kredit Komersil merupakan fasilitas pembiayaan yang diberikan kepada
+                            pelaku usaha mikro, kecil, dan menengah (UMKM) untuk mendukung
+                            pengembangan usaha produktif.
+                        </p>
+                        <p>
+                            Kredit ini dapat digunakan untuk kebutuhan modal kerja maupun
+                            investasi usaha sesuai ketentuan yang berlaku.
+                        </p>
+                    </div>
                 </div>
-            </div>
-        </a>
-        <a href="{{ url('warning') }}" class="text-white">
-            <div class="col content-produk my-3 ">
-                <img style="filter: brightness(50%);border-radius: 10px" src="{{ asset('assetGuest/img/Home-1.jpg') }}"
-                    class="card-img shadow bg-body " alt="...">
-                <div class="card-img-overlay">
-                    <h3 style="color: white;" class="card-title text-center">Pinjaman Pegawai</h3>
-                    <p class="card-text px-4">Kami menyediakan Pinjaman bagi Pegawai Negeri Sipil dan pinjaman
-                        tidak dikenakan bunga penalti setelah mencapai 50%.
-                    </p>
+            </a>
+        </div>
+
+        <!-- KREDIT KONSUMER -->
+        <div class="col">
+            <a href="{{ url('kredit-konsumer') }}" class="text-decoration-none text-white">
+                <div class="card shadow border-0 rounded-4 overflow-hidden">
+                    <img src="{{ asset('assetGuest/img/Home-1.jpg') }}"
+                         class="card-img"
+                         style="filter: brightness(55%); height: 280px; object-fit: cover;"
+                         alt="Kredit Konsumer">
+
+                    <div class="card-img-overlay d-flex flex-column justify-content-center text-center px-4">
+                        <h3 class="fw-bold text-white">Kredit Konsumer</h3>
+                        <p class="mt-3">
+                            Kredit Konsumer adalah fasilitas pinjaman yang diberikan kepada
+                            perorangan, khususnya Pegawai Negeri Sipil (PNS) dan pegawai tetap,
+                            untuk memenuhi kebutuhan konsumtif.
+                        </p>
+                        <p>
+                            Kredit ini memiliki skema pembayaran yang ringan dan
+                            tidak dikenakan bunga penalti setelah pelunasan mencapai 50%.
+                        </p>
+                    </div>
                 </div>
-            </div>
-        </a>
-        <a href="{{ url('warning') }}" class="text-white">
-            <div class="col content-produk my-3 ">
-                <img style="filter: brightness(50%);border-radius: 10px" src="{{ asset('assetGuest/img/Home-1.jpg') }}"
-                    class="card-img shadow bg-body " alt="...">
-                <div class="card-img-overlay">
-                    <h3 style="color: white;" class="card-title text-center">Pinjaman Multiguna</h3>
-                    <p class="card-text px-4">Pinjaman ini menyediakan beberapa keuntungan yang menarik</p>
-                </div>
-            </div>
-        </a>
-        <a href="{{ url('warning') }}" class="text-white">
-            <div class="col content-produk my-3 ">
-                <img style="filter: brightness(50%);border-radius: 10px" src="{{ asset('assetGuest/img/Home-1.jpg') }}"
-                    class="card-img shadow bg-body " alt="...">
-                <div class="card-img-overlay">
-                    <h3 style="color: white;" class="card-title text-center">Pinjaman Modal Kerja</h3>
-                    <p class="card-text px-4">Pinjaman ini menyediakan beberapa keuntungan yang menarik</p>
-                </div>
-            </div>
-        </a>
-        <a href="{{ url('warning') }}" class="text-white">
-            <div class="col content-produk my-3 ">
-                <img style="filter: brightness(50%);border-radius: 10px" src="{{ asset('assetGuest/img/Home-1.jpg') }}"
-                    class="card-img shadow bg-body " alt="...">
-                <div class="card-img-overlay">
-                    <h3 style="color: white;" class="card-title text-center">Pinjaman Prapensiun</h3>
-                    <p class="card-text px-4">Pinjaman ini menyediakan beberapa keuntungan yang menarik</p>
-                </div>
-            </div>
-        </a>
-        <a href="{{ url('warning') }}" class="text-white">
-            <div class="col content-produk my-3 ">
-                <img style="filter: brightness(50%);border-radius: 10px" src="{{ asset('assetGuest/img/Home-1.jpg') }}"
-                    class="card-img shadow bg-body " alt="...">
-                <div class="card-img-overlay">
-                    <h3 style="color: white;" class="card-title text-center">Pinjaman Pensiun</h3>
-                    <p class="card-text px-4">Pinjaman ini menyediakan beberapa keuntungan yang menarik</p>
-                </div>
-            </div>
-        </a>
-        <a href="{{ url('warning') }}" class="text-white">
-            <div class="col content-produk my-3 ">
-                <img style="filter: brightness(50%);border-radius: 10px" src="{{ asset('assetGuest/img/Home-1.jpg') }}"
-                    class="card-img shadow bg-body " alt="...">
-                <div class="card-img-overlay">
-                    <h3 style="color: white;" class="card-title text-center">Pinjaman PDRS</h3>
-                    <p class="card-text px-4">Pinjaman ini menyediakan beberapa keuntungan yang menarik</p>
-                </div>
-            </div>
-        </a>
-        <a href="{{ url('warning') }}" class="text-white">
-            <div class="col content-produk my-3 ">
-                <img style="filter: brightness(50%);border-radius: 10px" src="{{ asset('assetGuest/img/Home-1.jpg') }}"
-                    class="card-img shadow bg-body " alt="...">
-                <div class="card-img-overlay">
-                    <h3 style="color: white;" class="card-title text-center">Pinjaman Jaminan Tunai</h3>
-                    <p class="card-text px-4">Pinjaman ini menyediakan beberapa keuntungan yang menarik</p>
-                </div>
-            </div>
-        </a>
-        <a href="{{ url('warning') }}" class="text-white">
-            <div class="col content-produk my-3 ">
-                <img style="filter: brightness(50%);border-radius: 10px" src="{{ asset('assetGuest/img/Home-1.jpg') }}"
-                    class="card-img shadow bg-body " alt="...">
-                <div class="card-img-overlay">
-                    <h3 style="color: white;" class="card-title text-center">Pinjaman Kontruksi</h3>
-                    <p class="card-text px-4">Pinjaman ini menyediakan beberapa keuntungan yang menarik</p>
-                </div>
-            </div>
-        </a>
+            </a>
+        </div>
+
     </div>
+</div>
 
 @endsection

@@ -9,8 +9,8 @@
     <div class="carousel-inner">
         <div class="carousel-item active">
             <img style="width: 100%; height: 30%;object-fit: cover;
-            object-position: 50% 50%; filter: brightness(65%);"
-            src="{{ asset('assetGuest/img/cover/PROFILE.png') }}" class="card-img my-2" alt="...">
+            object-position: 50% 50%; filter: brightness(65%);" src="{{ asset('assetGuest/img/cover/PROFILE.png') }}"
+                class="card-img my-2" alt="...">
 
             <div class="card-img-overlay top-50 start-0 translate-middle-y px-5">
                 <h1 class="card-title text-white">Tentang Kami</h1>
@@ -157,7 +157,9 @@
             <div class="panel-header" onclick="togglePanel('panelContent7')">Visi & Misi</div>
             <div class="panel-header" onclick="togglePanel('panelContent8')">Prestasi & Penghargaan</div>
             <div class="panel-header" onclick="togglePanel('panelContent9')">Pengurus</div>
+            <div class="panel-header" onclick="togglePanel('panelContent10')">Download Company Profile</div>
         </div>
+
         <div class="content">
             <div class="panel-content" id="panelContent1">
                 <h5 class="text-center">PENDIRIAN PERUSAHAAN</h5>
@@ -466,7 +468,7 @@
                     <img src="{{ asset('assetGuest/img/awards/INFOBANK 20201.jpg')}}">
                 </div>
                 <div class="text-center description my-4">
-                Sebagai BPR dengan kinerja keuangan Sangat Bagus<br>
+                    Sebagai BPR dengan kinerja keuangan Sangat Bagus<br>
                     Tahun : 2009-2010, 2013, 2015, 2020 (5 Tahun)<br>
                 </div>
 
@@ -576,20 +578,33 @@
                     <br>
                 </div>
             </div>
+            <div class="panel-content" id="panelContent10">
+                <h5 class="text-center">Download Company Profile</h5>
+                <p>
+                    Company Profile PT BPR WAWAY tersedia untuk diunduh melalui media ini.
+                    Dokumen ini merupakan dokumen resmi perusahaan dan dilindungi oleh peraturan perundang-undangan.
+                    Segala bentuk penyalahgunaan, penyalinan, atau pendistribusian tanpa persetujuan tertulis dari PT
+                    BPR WAWAY akan dikenakan sanksi sesuai dengan ketentuan hukum yang berlaku di Republik Indonesia.
+                </p>
+                <div class="download-wrapper">
+                    <a href="{{ asset('assetGuest/Pdf_laporan/Company_Profile.pdf') }}" class="btn-download" download>
+                        📄 Download Company Profile
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
-</div>
 
-<script>
-    function togglePanel(panelId) {
-        var panels = document.querySelectorAll('.panel-content');
-        panels.forEach(panel => panel.style.display = 'none');
-        document.getElementById(panelId).style.display = 'block';
-    }
-    // Tampilkan panelContent1 saat halaman dimuat
-    document.addEventListener("DOMContentLoaded", function () {
-        document.getElementById("panelContent1").style.display = "block";
-    });
-</script>
+    <script>
+        function togglePanel(panelId) {
+            var panels = document.querySelectorAll('.panel-content');
+            panels.forEach(panel => panel.style.display = 'none');
+            document.getElementById(panelId).style.display = 'block';
+        }
+        // Tampilkan panelContent1 saat halaman dimuat
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("panelContent1").style.display = "block";
+        });
+    </script>
 
-@endsection
+    @endsection
