@@ -39,6 +39,12 @@
         </a>
     </div>
     <div class="carousel-item">
+        <a href="https://lapssjk.id/" target="_blank">
+            <img src="{{ asset('assetGuest/img/cover/SLIDER-WEBSITE-6.jpg') }}"
+                class="d-block w-100 object-fit-cover" style="height: 600px;" alt="Slide 1">
+        </a>
+    </div>
+    <div class="carousel-item">
         <img src="{{ asset('assetGuest/img/cover/SLIDER-WEBSITE-1.png') }}"
             class="d-block w-100 object-fit-cover" style="height: 600px;" alt="Slide 1">
     </div>
