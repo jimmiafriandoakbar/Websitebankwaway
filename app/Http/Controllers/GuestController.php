@@ -41,12 +41,14 @@ class GuestController extends Controller
                     'min:3'
                 ],
                 'email' => 'required|email',
-                'pesan' => 'required|min:15'
+                'no_hp' => 'required|digits_between:10,15',
+                'pesan' => 'required|min:15' 
             ]);
         } catch (\Exception $e) {
             alert()->html('<i style="color:red;">WARNING..!!!</i>', " 
-                    <li>Nama inimal 3 character</li>
-                    <li>Pesan minimal 15 character</li>
+                    <li>Nama minimal 3 karakter</li>
+                    <li>Pesan minimal 15 karakter</li>
+                    <li>Nomor HP wajib diisi (10-15 digit)</li>
             ", 'warning');
 
             return redirect()->to('/');
@@ -55,18 +57,14 @@ class GuestController extends Controller
         $stmtKritikPost = [
             'nama' => $request->input('nama'),
             'email' => $request->input('email'),
+            'no_hp' => $request->input('no_hp'), 
             'pesan' => $request->input('pesan'),
             'created_at' => DB::raw('NOW()')
         ];
 
-        $stmtDataKreditInput = $this->modelKrisan->kritikPost($stmtKritikPost);
+        $this->modelKrisan->kritikPost($stmtKritikPost);
 
-        // if ($stmtDataKreditInput) {
-        //     return redirect()->to('/')->with('message', '<script>alert("Berhasil tersimpan, mohon tunggu tim kami menghubungi anda. terimakasih");</script>');
-        // } else {
-        //     return redirect()->to('/')->with('message', '<script>alert("Gagal");</script>');
-        // }
-        Alert::success('Success Title', 'Success Message');
+        Alert::success('Berhasil', 'Pengaduan berhasil dikirim');
         return redirect()->to('/');
     }
 

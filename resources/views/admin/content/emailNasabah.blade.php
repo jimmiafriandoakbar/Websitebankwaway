@@ -40,6 +40,7 @@
                                             <th>Name</th>
                                             <th>Email</th>
                                             <th>Pesan</th>
+                                            <th>No Hp</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -50,6 +51,7 @@
                                                 <td><a href="#">{{ $e->nama }}</a></td>
                                                 <td><b>{{ $e->email }}</b> </td>
                                                 <td>{{ $e->pesan }}</td>
+                                                <td>{{ $e->no_hp }}</td>
                                             </tr>
                                         @endforeach
                                     </tbody>
