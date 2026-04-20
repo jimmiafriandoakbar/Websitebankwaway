@@ -21,7 +21,7 @@ class Toaster
      * @var \Illuminate\Contracts\View\Factory
      * @author Keller Martin <kellerjmrtn@gmail.com>
      */
-    protected ViewFactory $view;
+    protected $view;
 
     /**
      * Configuration options.
