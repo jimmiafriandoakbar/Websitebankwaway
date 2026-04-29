@@ -524,18 +524,18 @@
                 <h5 class="text-center">PENGURUS</h5>
                 <div class="d-flex flex-wrap justify-content-center mx-2 my-2">
                     <div class="row">
-                        <!-- <div class="col my-3">
+                        <div class="col my-3">
                             <div class="card shadow border-0 rounded-3 text-center" style="width: 250px;">
                                 <img class="card-img-top mx-auto mt-4"
                                     style="width: 180px; height: 180px; object-fit: cover; object-position: center;"
-                                    src="{{ asset('assetGuest/img/Pengurus/Firdaus-Andiko.jpg') }}"
+                                    src="{{ asset('assetGuest/img/Pengurus/PAK-HARRIS.jpg') }}"
                                     alt="Firdaus Andiko">
                                 <div class="card-body">
-                                    <h5 class="card-title fw-bold">Firdaus Andiko</h5>
+                                    <h5 class="card-title fw-bold">Harris Surahya</h5>
                                     <p class="card-text">Direktur Utama <br> PT BPR WAWAY LAMPUNG (Perseroda)</p>
                                 </div>
                             </div>
-                        </div> -->
+                        </div>
 
                         <div class="col my-3">
                             <div class="card shadow border-0 rounded-3 text-center" style="width: 250px;">
@@ -544,7 +544,7 @@
                                     src="{{ asset('assetGuest/img/Pengurus/anang_sofi.jpg') }}" alt="Anang Sofi">
                                 <div class="card-body">
                                     <h5 class="card-title fw-bold">Anang Sofi</h5>
-                                    <p class="card-text">Plt Direktur Utama <br> PT BPR WAWAY LAMPUNG (Perseroda)</p>
+                                    <p class="card-text">Direktur Operasional <br> PT BPR WAWAY LAMPUNG (Perseroda)</p>
                                 </div>
                             </div>
                         </div>
