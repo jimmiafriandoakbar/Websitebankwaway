@@ -521,7 +521,7 @@
                     </div>
                 </div>
                 <br>
-                <h5 class="text-center">PENGURU</h5>
+                <h5 class="text-center">PENGURUS</h5>
                 <div class="d-flex flex-wrap justify-content-center mx-2 my-2">
                     <div class="row">
                         <div class="col my-3">
