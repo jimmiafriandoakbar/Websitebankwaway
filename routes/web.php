@@ -98,14 +98,14 @@ Route::post('/wbsPost2', 'WbsController@wbsPost')->name('wbsPost');
 
 /*
 |--------------------------------------------------------------------------
-| AUTH (TANPA VERIFIKASI)
+| AUTH
 |--------------------------------------------------------------------------
 */
-Auth::routes(); // ✅ sudah tanpa verify
+Auth::routes();
 
 /*
 |--------------------------------------------------------------------------
-| SETELAH LOGIN
+| AFTER LOGIN
 |--------------------------------------------------------------------------
 */
 Route::get('/home', function () {
@@ -119,15 +119,14 @@ Route::get('/logout-test', function () {
 
 /*
 |--------------------------------------------------------------------------
-| ADMIN WBS
+| ADMIN WBS (FIX)
 |--------------------------------------------------------------------------
 */
-Route::get('/admin-wbs', function () {
-    return view('admin-wbs.index-wbs');
-})->middleware('auth');
 
+// ✅ HANYA SATU ROUTE (INI YANG BENAR)
 Route::get('/admin-wbs', [WbsAdminController::class, 'index'])
     ->middleware('auth');
 
-Route::get('/admin-wbs', [WbsAdminController::class, 'index'])->middleware('auth');
-Route::get('/admin-wbs/{id}', [WbsAdminController::class, 'show'])->name('admin.wbsDetail');
+// detail
+Route::get('/admin-wbs/{id}', [WbsAdminController::class, 'show'])
+    ->name('admin.wbsDetail');
