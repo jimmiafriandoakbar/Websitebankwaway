@@ -402,7 +402,7 @@
                     tentang Pengangkatan Direktur Operasional PT BPR Waway Lampung (Perseroda).</P>
                 <h6>Direksi</h6>
                 <ul>
-                    <li>Direktur Utama: Firdaus Andiko (Masa Jabatan 18-01-2024 s.d 18-01-2029)</li>
+                    <li>Direktur Utama: Harris Surahya (Masa Jabatan 26-01-2026 s.d 26-01-2031)</li>
                     <li>Direktur Operasional: Anang Sofi (Masa Jabatan 18-01-2024 s.d 18-01-2029)</li>
                 </ul>
             </div>

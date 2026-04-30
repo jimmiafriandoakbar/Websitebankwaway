@@ -3,36 +3,28 @@
 use Illuminate\Support\Facades\Route;
 use RealRashid\SweetAlert\Facades\Alert;
 use App\Http\Controllers\VerifikasiDownloadController;
+use App\Http\Controllers\WbsAdminController;
+
+/*
+|--------------------------------------------------------------------------
+| BASIC ROUTES
+|--------------------------------------------------------------------------
+*/
 
 Route::post('/verifikasi-download', [VerifikasiDownloadController::class, 'store'])
      ->name('verifikasi.download');
 
-
 /*
 |--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-/*
-|--------------------------------------------------------------------------
-| Application Routes
+| APPLICATION ROUTES
 |--------------------------------------------------------------------------
 */
 
 Route::get('/run', function () {
     Alert::success('Success Title', 'Success Message');
-})->name('');
+});
 
 Route::get('/', 'GuestController@index');
-// Route::get('/', function () {
-//     return view('templates.perbaikan');
-// });
 
 Route::get('/deposito', function () {
     return view('guest/content/deposito');
@@ -40,11 +32,11 @@ Route::get('/deposito', function () {
 
 Route::post('/saran', 'GuestController@kritikPost')->name('kritik');
 
-// route pembukaan rekening
+// pembukaan rekening
 Route::get('/pembukaanRekening', 'GuestController@pembukaanRekening')->name('pembukaanRekening');
 Route::post('/pembukaanRekening', 'GuestController@pembukaanRekeningPost')->name('pembukaanRekeningPost');
 
-// route kredit
+// kredit
 Route::get('/kredit', function () {
     return view('guest/content/kredit');
 });
@@ -55,72 +47,33 @@ Route::get('/kredit-komersil', function () {
     return view('guest/content/kredit-komersil');
 });
 
-// route warning
-Route::get('/warning', function () {
-    return view('guest/content/warning');
-});
+// lainnya
+Route::get('/warning', fn() => view('guest/content/warning'));
+Route::get('/tabungan', fn() => view('guest/content/tabungan'));
+Route::get('/profile', fn() => view('guest/content/profile'));
+Route::get('/simulasi', fn() => view('guest/content/simulasi'));
+Route::get('/bantuan', fn() => view('guest/content/bantuan'));
 
-// route tabungan
-Route::get('/tabungan', function () {
-    return view('guest/content/tabungan');
-});
-
-// route profile
-Route::get('/profile', function () {
-    return view('guest/content/profile');
-});
-
-// route profile
-Route::get('/simulasi', function () {
-    return view('guest/content/simulasi');
-});
-
-// informasi
 Route::get('/informasi', 'GuestController@informasi')->name('informasi');
-
-// laporan
 Route::get('/laporan', 'GuestController@laporan');
-
-// laporan-gcg
 Route::get('/laporan-gcg', 'GuestController@laporanGcg');
-// Route::get('/laporan-gcg', function(){
-//     return "DALAM PERBAIKAN";
-// });
-
-// laporan-keberlanjutan
 Route::get('/laporan-keberlanjutan', 'GuestController@laporankeberlanjutan');
-
-// laporan-tahunan
 Route::get('/laporan-tahunan', 'GuestController@laporantahunan');
-
-// laporan-pelayanan-kons
-
 Route::get('/laporan-pelayanan-kons', 'GuestController@laporanPelayananKons');
 
-// bantuan
-Route::get('/bantuan', function () {
-    return view('guest/content/bantuan');
-});
-
-// karier
 Route::get('/karir', 'GuestController@karir')->name('karir');
 
-// perbaikan
 Route::get('/perbaikan', function () {
     return view('templates.perbaikan');
 })->name('perbaikan');
 
-Route::get('/formdeposit', function () {
-    return view('guest.content.formdeposit');
-})->name('formdeposit');
-
+// form
+Route::get('/formdeposit', fn() => view('guest.content.formdeposit'))->name('formdeposit');
 Route::post('/formdepositSubmit', 'GuestController@formdeposit')->name('formdepositSubmit');
-
 
 Route::get('/formKredit', 'Admin\\FormKreditController@index')->name('formKredit');
 Route::post('/formKreditPost', 'Admin\\FormKreditController@formKreditPost')->name('formKreditPost');
 
-// formKreditPegawai
 Route::get('/formKreditPegawai', 'FormKreditPegawaiController@index')->name('formKreditPegawai');
 Route::post('/formKreditPegawaiPost', 'FormKreditPegawaiController@formKreditPegawaiPost')->name('formKreditPegawaiPost');
 
@@ -139,20 +92,42 @@ Route::post('kreditPegawai/agunanPost', 'KreditPegawaiController@agunanPost')->n
 Route::get('kreditPegawai/uploadKtp', 'KreditPegawaiController@uploadKtp')->name('uploadKtp');
 Route::post('kreditPegawai/uploadKtpPost', 'KreditPegawaiController@uploadKtpPost')->name('uploadKtpPost');
 
-// WBS
+// WBS publik
 Route::get('/wbs2', 'WbsController@index')->name('wbs2');
 Route::post('/wbsPost2', 'WbsController@wbsPost')->name('wbsPost');
 
 /*
 |--------------------------------------------------------------------------
-| Routes Admin
+| AUTH (TANPA VERIFIKASI)
 |--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider zz
 */
-Auth::routes(['verify' => true]);
+Auth::routes(); // ✅ sudah tanpa verify
 
+/*
+|--------------------------------------------------------------------------
+| SETELAH LOGIN
+|--------------------------------------------------------------------------
+*/
 Route::get('/home', function () {
     return view('guest/content/verifiedLogin');
-})->name('home')->middleware('verified');
+})->name('home');
+
+Route::get('/logout-test', function () {
+    auth()->logout();
+    return redirect('/login');
+});
+
+/*
+|--------------------------------------------------------------------------
+| ADMIN WBS
+|--------------------------------------------------------------------------
+*/
+Route::get('/admin-wbs', function () {
+    return view('admin-wbs.index-wbs');
+})->middleware('auth');
+
+Route::get('/admin-wbs', [WbsAdminController::class, 'index'])
+    ->middleware('auth');
+
+Route::get('/admin-wbs', [WbsAdminController::class, 'index'])->middleware('auth');
+Route::get('/admin-wbs/{id}', [WbsAdminController::class, 'show'])->name('admin.wbsDetail');

@@ -4,51 +4,37 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
-
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
-    /*
-    |--------------------------------------------------------------------------
-    | Login Controller
-    |--------------------------------------------------------------------------
-    |
-    | This controller handles authenticating users for the application and
-    | redirecting them to your home screen. The controller uses a trait
-    | to conveniently provide its functionality to your applications.
-    |
-    */
-
     use AuthenticatesUsers;
 
     /**
-     * The user has been authenticated.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  mixed  $user
-     * @return mixed
+     * Setelah login berhasil
      */
     protected function authenticated(Request $request, $user)
     {
-        if ($user->hasRole('admin')) {
-            return redirect()->route('admin.dashboard');
+        // kalau pakai spatie role (opsional)
+        if (method_exists($user, 'hasRole') && $user->hasRole('admin')) {
+            return redirect('/admin');
         }
+
+        // role wbs
+        if ($user->role == 'wbs') {
+            return redirect('/admin-wbs');
+        }
+
+        // default
+        return redirect('/admin-wbs');
     }
 
     /**
-     * Where to redirect users after login.
-     *
-     * @var string
+     * Default redirect (tidak terlalu dipakai karena override di atas)
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo = '/admin-wbs';
 
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
