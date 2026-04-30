@@ -47,12 +47,22 @@ Route::get('/kredit-komersil', function () {
     return view('guest/content/kredit-komersil');
 });
 
-// lainnya
-Route::get('/warning', fn() => view('guest/content/warning'));
-Route::get('/tabungan', fn() => view('guest/content/tabungan'));
-Route::get('/profile', fn() => view('guest/content/profile'));
-Route::get('/simulasi', fn() => view('guest/content/simulasi'));
-Route::get('/bantuan', fn() => view('guest/content/bantuan'));
+// lainnya (FIX TANPA fn())
+Route::get('/warning', function () {
+    return view('guest/content/warning');
+});
+Route::get('/tabungan', function () {
+    return view('guest/content/tabungan');
+});
+Route::get('/profile', function () {
+    return view('guest/content/profile');
+});
+Route::get('/simulasi', function () {
+    return view('guest/content/simulasi');
+});
+Route::get('/bantuan', function () {
+    return view('guest/content/bantuan');
+});
 
 Route::get('/informasi', 'GuestController@informasi')->name('informasi');
 Route::get('/laporan', 'GuestController@laporan');
@@ -67,8 +77,11 @@ Route::get('/perbaikan', function () {
     return view('templates.perbaikan');
 })->name('perbaikan');
 
-// form
-Route::get('/formdeposit', fn() => view('guest.content.formdeposit'))->name('formdeposit');
+// form (FIX TANPA fn())
+Route::get('/formdeposit', function () {
+    return view('guest.content.formdeposit');
+})->name('formdeposit');
+
 Route::post('/formdepositSubmit', 'GuestController@formdeposit')->name('formdepositSubmit');
 
 Route::get('/formKredit', 'Admin\\FormKreditController@index')->name('formKredit');
@@ -119,14 +132,12 @@ Route::get('/logout-test', function () {
 
 /*
 |--------------------------------------------------------------------------
-| ADMIN WBS (FIX)
+| ADMIN WBS
 |--------------------------------------------------------------------------
 */
 
-// ✅ HANYA SATU ROUTE (INI YANG BENAR)
 Route::get('/admin-wbs', [WbsAdminController::class, 'index'])
     ->middleware('auth');
 
-// detail
 Route::get('/admin-wbs/{id}', [WbsAdminController::class, 'show'])
     ->name('admin.wbsDetail');
