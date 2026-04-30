@@ -18,7 +18,7 @@ class LoginController extends Controller
     {
         // kalau pakai spatie role (opsional)
         if (method_exists($user, 'hasRole') && $user->hasRole('admin')) {
-            return redirect('/admin');
+            return redirect('/admin/home');
         }
 
         // role wbs
