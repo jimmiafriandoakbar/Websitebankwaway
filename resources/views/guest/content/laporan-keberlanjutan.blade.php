@@ -56,6 +56,21 @@
             </div>
         </div>
     </div>
+    <div class="col content-home-card mb-5">
+        <div style="border-radius: 10%;" class="card">
+            <img style="height: 250px; width: 200px; object-fit: cover; object-position: 50% 50%; border-radius: 5%;"
+                src="{{asset('assetGuest/img/cover_buku/cover_buku.jpg') }}"
+                class="card-img-top img-fluid mx-auto mt-4 shadow bg-body" alt="...">
+            <div class="card-body text-center">
+                <h5 class="card-title">Laporan Keberlanjutan</h5>
+                <p class="card-text">Tahun 2025</p>
+                <button class="btn btn-link p-0"
+                    onclick="openDownloadModal('{{ asset('assetGuest/Pdf_laporan/Laporanpublikasi-2025.pdf') }}')">
+                    Download
+                </button>
+            </div>
+        </div>
+    </div>
 </div>
 
 <!-- Modal (disamakan dengan kodingan 2) -->

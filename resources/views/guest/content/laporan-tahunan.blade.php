@@ -31,16 +31,33 @@
                 <h5 class="card-title">Laporan Tahunan</h5>
                 <p class="card-text">Tahun 2024</p>
                 <button class="btn btn-link p-0"
-    onclick="openDownloadModal('{{ asset('assetGuest/Pdf_laporan/Laporantahun2024.pdf') }}')">
-    Download
-</button>
+                    onclick="openDownloadModal('{{ asset('assetGuest/Pdf_laporan/Laporantahun2024.pdf') }}')">
+                    Download
+                </button>
+
+            </div>
+        </div>
+    </div>
+    <div class="col content-home-card mb-5">
+        <div style="border-radius: 10%;" class="card">
+            <img style="height: 250px; width: 200px; object-fit: cover; object-position: 50% 50%; border-radius: 5%;"
+                src="{{asset('assetGuest/img/cover_buku/cover_buku.jpg') }}"
+                class="card-img-top img-fluid mx-auto mt-4 shadow bg-body" alt="...">
+            <div class="card-body text-center">
+                <h5 class="card-title">Laporan Tahunan</h5>
+                <p class="card-text">Tahun 2024</p>
+                <button class="btn btn-link p-0"
+                    onclick="openDownloadModal('{{ asset('assetGuest/Pdf_laporan/Laporantahun2025.pdf') }}')">
+                    Download
+                </button>
 
             </div>
         </div>
     </div>
 </div>
 <div class="modal fade" id="downloadModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg"> <!-- Tambahkan modal-lg agar landscape -->
+    <div class="modal-dialog modal-lg">
+        <!-- Tambahkan modal-lg agar landscape -->
         <div class="modal-content">
 
             <div class="modal-header">
@@ -56,17 +73,20 @@
 
                         <div class="mb-3">
                             <label>Nama</label>
-                            <input id="namaInput" type="text" class="form-control" placeholder="Masukkan nama..." required>
+                            <input id="namaInput" type="text" class="form-control" placeholder="Masukkan nama..."
+                                required>
                         </div>
 
                         <div class="mb-3">
                             <label>Email</label>
-                            <input id="emailInput" type="email" class="form-control" placeholder="Masukkan email..." required>
+                            <input id="emailInput" type="email" class="form-control" placeholder="Masukkan email..."
+                                required>
                         </div>
 
                         <div class="mb-3">
                             <label>No. Telepon</label>
-                            <input id="telpInput" type="number" class="form-control" placeholder="Masukkan nomor telepon..." required>
+                            <input id="telpInput" type="number" class="form-control"
+                                placeholder="Masukkan nomor telepon..." required>
                         </div>
 
                     </div>
@@ -76,12 +96,14 @@
 
                         <div class="mb-3">
                             <label>Instansi/Lembaga</label>
-                            <input id="instansiInput" type="text" class="form-control" placeholder="Masukkan nama instansi..." required>
+                            <input id="instansiInput" type="text" class="form-control"
+                                placeholder="Masukkan nama instansi..." required>
                         </div>
 
                         <div class="mb-3">
                             <label>Keperluan</label>
-                            <textarea id="keperluanInput" class="form-control" placeholder="Tuliskan keperluan Anda..." rows="5" required></textarea>
+                            <textarea id="keperluanInput" class="form-control" placeholder="Tuliskan keperluan Anda..."
+                                rows="5" required></textarea>
                         </div>
 
                         <div class="form-check mt-2">
@@ -136,37 +158,37 @@
 
         // Kirim ke server
         fetch("{{ route('verifikasi.download') }}", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                "X-CSRF-TOKEN": "{{ csrf_token() }}"
-            },
-            body: JSON.stringify({
-                nama: nama,
-                email: email,
-                no_telp: telp,
-                instansi: instansi,
-                keperluan: keperluan,
-                agree: agree ? 1 : 0,
-                file: fileToDownload
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "X-CSRF-TOKEN": "{{ csrf_token() }}"
+                },
+                body: JSON.stringify({
+                    nama: nama,
+                    email: email,
+                    no_telp: telp,
+                    instansi: instansi,
+                    keperluan: keperluan,
+                    agree: agree ? 1 : 0,
+                    file: fileToDownload
+                })
             })
-        })
-        .then(response => response.text())
-.then(text => {
-    console.log("Raw response:", text); // debug
-    try {
-        let data = JSON.parse(text);
-        if (data.success) {
-            window.open(fileToDownload, "_blank");
-            bootstrap.Modal.getInstance(document.getElementById('downloadModal')).hide();
-        } else {
-            alert("Gagal menyimpan data!");
-        }
-    } catch (e) {
-        console.error("Response bukan JSON:", text);
-        alert("Server tidak mengembalikan JSON. Cek log backend.");
-    }
-})
+            .then(response => response.text())
+            .then(text => {
+                console.log("Raw response:", text); // debug
+                try {
+                    let data = JSON.parse(text);
+                    if (data.success) {
+                        window.open(fileToDownload, "_blank");
+                        bootstrap.Modal.getInstance(document.getElementById('downloadModal')).hide();
+                    } else {
+                        alert("Gagal menyimpan data!");
+                    }
+                } catch (e) {
+                    console.error("Response bukan JSON:", text);
+                    alert("Server tidak mengembalikan JSON. Cek log backend.");
+                }
+            })
 
     }
 </script>
