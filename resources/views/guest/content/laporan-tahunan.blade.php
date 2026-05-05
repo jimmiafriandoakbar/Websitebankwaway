@@ -45,7 +45,7 @@
                 class="card-img-top img-fluid mx-auto mt-4 shadow bg-body" alt="...">
             <div class="card-body text-center">
                 <h5 class="card-title">Laporan Tahunan</h5>
-                <p class="card-text">Tahun 2024</p>
+                <p class="card-text">Tahun 2025</p>
                 <button class="btn btn-link p-0"
                     onclick="openDownloadModal('{{ asset('assetGuest/Pdf_laporan/Laporantahun2025.pdf') }}')">
                     Download
