@@ -391,7 +391,7 @@
                 <ul>
                     <li>Komisaris Utama: Robi Suliska Sobri, S.IP., M.IP., QCRO (Masa Jabatan 16-07-2024 s.d 15-07-2028)
                     </li>
-                    <li>Komisaris: Yusdiyanto, S.H., M.H. (Masa Jabatan 31-03-2022 s.d 30-03-2026)</li>
+                    <li>Komisaris: Yusdiyanto, S.H., M.H. (Masa Jabatan 30-03-2026 s.d 30-03-2030)</li>
                 </ul>
                 <P>Susunan Direksi PT BPR WAWAY LAMPUNG (Perseroda) sesuai dengan Surat Keputusan Walikota Bandar
                     Lampung No.
